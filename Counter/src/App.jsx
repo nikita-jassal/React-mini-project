@@ -6,11 +6,22 @@ function App() {
   const [value, setValue] = useState(0);
 
   const addValue = () => {
-    setValue(value + 1);
+    if(value<=20 ){
+      setValue(value+1);
+    }
+    else{
+      alert("the value can't be greater then 20");
+
+    }
   };
 
   const removeValue = () => {
-    setValue(value - 1);
+    if(value>=1){
+      setValue(value-1);
+    }else{
+      alert("the value can't be negative");
+    }
+    
   };
 
   return (
